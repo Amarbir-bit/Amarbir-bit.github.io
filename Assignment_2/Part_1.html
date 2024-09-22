@@ -105,14 +105,13 @@ Description: Create a fininshed Mozilla splash page.
   <body>
     <header>
       <h1>Mozilla</h1>
-      <!-- insert <img> element, link to the small
-          version of the Firefox logo -->
+      <img src="./Part_1_images/firefoxlogo120.png" alt="FireFox">
 
     </header>
 
     <main>
       <article>
-        <!-- insert iframe from youtube -->
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/ojcNcvb1olg" frameborder="0" allowfullscreen></iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -122,12 +121,15 @@ Description: Create a fininshed Mozilla splash page.
       </article>
 
       <div class="further-info">
-        <!-- insert images with srcsets and sizes -->
+
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+          <img srcset="firefoxlogo120 120w , firefoxlogo400 400w" sizes="(max-width: 500px) 120px, 400px"
+          src="./Part_1_images/firefoxlogo400.png" alt="FireFox">
         </a>
+
         <a href="https://www.mozilla.org/">
-          <img>
+          <img srcset="mozilladinosaur120.png 120w, mozilladinosaur400.png 400w" sizes="(max-width: 500px) 120px, 400px"
+               src="./Part_1_images/mozilladinosaur400.png" alt="Mozilla">
         </a>
         <a href="https://addons.mozilla.org/">
           <img>
