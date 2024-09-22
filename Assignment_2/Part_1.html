@@ -16,7 +16,7 @@ Description: Create a fininshed Mozilla splash page.
 
       html {
         font-family: 'Open Sans', sans-serif;
-        background: url(pattern.png);
+        background: url(./Part_1_images/pattern.png);
       }
 
       body {
@@ -123,18 +123,20 @@ Description: Create a fininshed Mozilla splash page.
       <div class="further-info">
 
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img srcset="firefoxlogo120 120w , firefoxlogo400 400w" sizes="(max-width: 500px) 120px, 400px"
+          <img srcset="firefoxlogo120.png 120w , firefoxlogo400.png 400w" sizes="(max-width: 500px) 120px, 400px"
           src="./Part_1_images/firefoxlogo400.png" alt="FireFox">
         </a>
 
         <a href="https://www.mozilla.org/">
-          <img srcset="mozilladinosaur120.png 120w, mozilladinosaur400.png 400w" sizes="(max-width: 500px) 120px, 400px"
-               src="./Part_1_images/mozilladinosaur400.png" alt="Mozilla">
+          <img 
+            srcset="mozilladinosaur120.png 120w, mozilladinosaur400.png 400w" sizes="(max-width: 500px) 120px, 400px"
+            src="./Part_1_images/mozilladinosaur400.png" alt="Mozilla">
         </a>
 
         <a href="https://addons.mozilla.org/">
-          <img srcset="firefoxaddons120.jpg 120w, firefoxaddons400.jpg 400w" sizes="(max-width: 500px) 120px, 400px"
-                src="./Part_1_images/firefoxaddons400.jpg" alt="Firefox">
+          <img 
+            srcset="firefoxaddons120.jpg 120w, firefoxaddons400.jpg 400w" sizes="(max-width: 500px) 120px, 400px"
+            src="./Part_1_images/firefoxaddons400.jpg" alt="Firefox">
         </a>
 
         <a href="https://developer.mozilla.org/en-US/">
@@ -145,7 +147,11 @@ Description: Create a fininshed Mozilla splash page.
       </div>
 
       <div class="red-panda">
-        <!-- insert picture element -->
+        <picture>
+            <source media="(max-width: 600px)" srcset="redpanda-portraitimage.jpg 600w">
+            <source media="(max-width: 601px)" srcset="redpanda-landscapeimage.jpg 1200w">
+            <img src="./Part_1_images/redpanda-landscapeimage.jpg" alt="red panda">
+          </picture>
       </div>
 
     </main>
