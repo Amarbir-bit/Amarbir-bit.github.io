@@ -18,9 +18,19 @@ const alternatives = {
 
 /* Looping through images */
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
+for (const picture of pictures) {
+
+    const newImage = document.createElement('img');
+
+    newImage.setAttribute('src', `Part_2images/${picture}`);
+    newImage.setAttribute('alt', alternatives[picture]);
+
+    thumbBar.appendChild(newImage);
+
+    newImage.addEventListener('click', e => {
+      displayedImage.src = e.target.src;
+      displayedImage.alt = e.target.alt;
+    });
+  }
 
 /* Wiring up the Darken/Lighten button */
