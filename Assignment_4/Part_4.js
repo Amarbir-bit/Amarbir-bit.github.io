@@ -145,6 +145,8 @@ class EvilCircle extends Shape {
   
           if (distance < this.size + ball.size) {
             ball.exists = false;
+
+            // Decrement the counter
             count--;
             para.textContent = 'Ball count: ' + count;
           }
@@ -156,11 +158,9 @@ class EvilCircle extends Shape {
 
 const balls = [];
 
-while (balls.length < 25) {
+while (balls.length < 40) {
   const size = random(10, 20);
   const ball = new Ball(
-    // ball position always drawn at least one ball width
-    // away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
     random(-7, 7),
@@ -170,6 +170,8 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  
+  // Adding the counter
   count++;
   para.textContent = 'Ball count: ' + count;
 }
