@@ -56,6 +56,20 @@ class Ball {
     this.x += this.velX;
     this.y += this.velY;
     }
+
+    collisionDetect() {
+        for (const ball of balls) {
+          if (this !== ball) {
+            const dx = this.x - ball.x;
+            const dy = this.y - ball.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+      
+            if (distance < this.size + ball.size) {
+              ball.color = this.color = randomRGB();
+            }
+          }
+        }
+      }
         
   }
 
@@ -66,9 +80,11 @@ testBall.size;
 testBall.color;
 testBall.draw();
 
+
+
 const balls = [];
 
-while (balls.length < 25) {
+while (balls.length < 40) {
   const size = random(10, 20);
   const ball = new Ball(
     // ball position always drawn at least one ball width
@@ -97,3 +113,4 @@ function loop() {
   }
  
 loop();
+  
