@@ -10,6 +10,8 @@ const height = (canvas.height = window.innerHeight);
 const para = document.querySelector('p');
 let count = 0;
 
+
+
 // function to generate random number
 
 function random(min, max) {
